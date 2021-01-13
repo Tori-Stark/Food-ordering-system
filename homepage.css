@@ -1,0 +1,119 @@
+body {
+
+ background-color: #cccccc;
+}
+
+.logo{
+	text-align: center;
+	font-family: Allura;
+	font-size: 20px;
+    font-weight: bolder;
+    
+
+}
+.roundlogo{
+	border-radius: 50%;
+
+}
+h1{
+	font-family: Italianno;
+	font-size: 60px;
+	text-align: center;
+
+}
+div.scrollmenu {
+  background-color: #FA8072;
+  white-space: nowrap;
+  position: fixed;
+  top: 0; 
+  width: 98.5%; 
+  border: 2px solid #B8860B;
+}
+
+div.scrollmenu a {
+	
+  display: inline-block;
+  color: black;
+  font-weight: bolder;
+  padding: 14px;
+  text-decoration: none;
+  float: right;
+
+}
+div.scrollmenu a:hover {
+  background-color: #DC143C;
+  font-style: italic;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  font-style: italic; 
+  
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+img.headline{
+	border: 2px solid #B8860B;
+	opacity: 0.5;
+	width: 30%
+	height:30%;
+	
+}
+.button {
+  background-color: #FA8072; 
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 19px;
+  border-radius: 12px;
+  border: 2px solid #B8860B;
+ 
+}
+.button:hover {
+  background-color: #DC143C; 
+  color: black;
+  border: 2px solid #B8860B;
+  
+}
+.festival,.memories,.reviews,.socialMedia,.staff{ 
+  display: flex; 
+  align-items: center; 
+} 
+span { 
+  padding: 10px; 
+  font-size: 18px;
+  font-style: italic;
+}
+legend,.h2{
+	font-family: Inconsolata;
+	font-size: 30px;
+	text-align: center;
+	font-style: italic;
+	
+
+}
+fieldset{
+	border: 2px solid #B8860B;
+	margin: 40px;
+  text-align: center;
+}
+
+.bottom{
+	background-color: #FA8072;
+	margin: 6px;
+	text-align: center;
+
+}
+.image{
+  text-align: center;
+  
+}
+

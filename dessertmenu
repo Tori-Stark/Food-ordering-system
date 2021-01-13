@@ -1,0 +1,187 @@
+<?php 
+session_start();
+ ?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Drink Menu</title>
+<link rel="stylesheet" type="text/css" href="booking.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italianno">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+</head>
+<body>
+  <div class="scrollmenu">
+        <img src="logo.JPG"  width="50" height="50" class="roundlogo">
+            <a href="contact.html">Contact</a>
+            <a href="career.html">Career</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="homepage.html">HomePage</a>
+     </div>
+     <br>
+   <h1 class="h1">  <strong>LE  &nbsp;&nbsp;FOOD'S &nbsp;&nbsp;  PALACE</strong> 
+    <p class="logo">" The secret is at the table" &nbsp;&nbsp;🍹🍸</p> 
+   </h1>
+    <p class="image">
+   
+        <img src="booking.JPEG"  width="1000" height="500"><br><br><br>
+     </p>
+<?php
+
+require_once("db_connect.php");
+$sql = "SELECT dessertID,dessertCategory,dessertName,dessertPrice FROM dessertmenu";
+$sql1 = "SELECT dessertID,dessertCategory,dessertName,dessertPrice FROM dessertmenu WHERE dessertCategory='Cakes'";
+$sql2 = "SELECT dessertID,dessertCategory,dessertName,dessertPrice FROM dessertmenu WHERE dessertCategory='Cupcakes'";
+$sql3 = "SELECT dessertID,dessertCategory,dessertName,dessertPrice FROM dessertmenu WHERE dessertCategory='Ice Cream'";
+$sql4 = "SELECT dessertID,dessertCategory,dessertName,dessertPrice FROM dessertmenu WHERE dessertCategory='Mousse'";
+$sql5 = "SELECT dessertID,dessertCategory,dessertName,dessertPrice FROM dessertmenu WHERE dessertCategory='Pies'";
+$sql6 = "SELECT dessertID,dessertCategory,dessertName,dessertPrice FROM dessertmenu WHERE dessertCategory='Puddings'";
+
+
+
+$result = ($conn->query($sql));
+$result1 = ($conn->query($sql1));
+$result2 = ($conn->query($sql2));
+$result3 = ($conn->query($sql3));
+$result4 = ($conn->query($sql4));
+$result5 = ($conn->query($sql5));
+$result6 = ($conn->query($sql6));
+
+
+
+
+if ($result->num_rows > 0) {
+// output data of each row
+
+	echo "<h2>Cakes</h2>";
+	 echo "<table><tr><th>Desert</th><th>Price</th></tr>";
+while($row = $result1->fetch_assoc()) {
+	   
+	
+		echo "<tr><td>" . $row["dessertName"] . "</td><td>"
+. $row["dessertPrice"]. "</td></tr>";
+	
+
+
+}
+
+echo "</table>";
+} 
+
+if ($result->num_rows > 0) {
+// output data of each row
+
+	echo "<h2>Cupcakes</h2>";
+	 echo "<table><tr><th>Desert</th><th>Price</th></tr>";
+while($row = $result2->fetch_assoc()) {
+	   
+	
+		echo "<tr><td>" . $row["dessertName"] . "</td><td>"
+. $row["dessertPrice"]. "</td></tr>";
+	
+
+
+}
+
+echo "</table>";
+} 
+
+if ($result->num_rows > 0) {
+// output data of each row
+
+	echo "<h2>Ice Cream</h2>";
+	 echo "<table><tr><th>Desert</th><th>Price</th></tr>";
+while($row = $result3->fetch_assoc()) {
+	   
+	
+		echo "<tr><td>" . $row["dessertName"] . "</td><td>"
+. $row["dessertPrice"]. "</td></tr>";
+	
+
+
+}
+
+echo "</table>";
+} 
+
+if ($result->num_rows > 0) {
+// output data of each row
+
+	echo "<h2>Mousse Cup</h2>";
+	 echo "<table><tr><th>Desert</th><th>Price</th></tr>";
+while($row = $result4->fetch_assoc()) {
+	   
+	
+		echo "<tr><td>" . $row["dessertName"] . "</td><td>"
+. $row["dessertPrice"]. "</td></tr>";
+	
+
+
+}
+
+echo "</table>";
+} 
+
+if ($result->num_rows > 0) {
+// output data of each row
+
+	echo "<h2>Pies</h2>";
+	 echo "<table><tr><th>Desert</th><th>Price</th></tr>";
+while($row = $result5->fetch_assoc()) {
+	   
+	
+		echo "<tr><td>" . $row["dessertName"] . "</td><td>"
+. $row["dessertPrice"]. "</td></tr>";
+	
+
+
+}
+
+echo "</table>";
+} 
+
+if ($result->num_rows > 0) {
+// output data of each row
+
+	echo "<h2>Pudding</h2>";
+	 echo "<table><tr><th>Desert</th><th>Price</th></tr>";
+while($row = $result6->fetch_assoc()) {
+	   
+	
+		echo "<tr><td>" . $row["dessertName"] . "</td><td>"
+. $row["dessertPrice"]. "</td></tr>";
+	
+
+
+}
+
+echo "</table>";
+} 
+ 
+$conn->close();
+?>
+
+<fieldset class="bottom">
+   <div >
+   	
+   	<span>
+   		<strong>
+      	Toll Free UAE: 800 ADDRESS (2337377)
+      	<br>
+        Toll Free KSA: 8008971470
+        <br>
+        Callback Service 
+        <br>
+        Phone: (+25) (0)703-0300/200/300 +254) OR (0) 730-7000/00/300 
+        <br>Email: info@LePalaceHotel.com
+        <br> Address: The Long Road, off Short Road, in Zwela 
+        </strong>
+  	</span> 
+  
+   	
+   </div>
+   </fieldset>
+</body>
+</html>
